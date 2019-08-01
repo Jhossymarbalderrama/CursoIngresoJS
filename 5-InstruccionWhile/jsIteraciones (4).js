@@ -1,7 +1,8 @@
+// Al presionar el botón pedir un número entre 0 y 9 inclusive.
+var numero;
+
 function mostrar()
 {
-  var numero;
-
   do{
     numero = parseInt(numero);
     numero = prompt("ingrese un número entre 0 y 10.");

@@ -1,6 +1,6 @@
-/*Al presionar el botón pedir números hasta que el usuario quiera, mostrar:*/ 
+/*Al presionar el botón pedir números hasta que el usuario quiera, mostrar:*/
 // 1-Suma de los negativos.
-// 2-Suma de los positivos. 
+// 2-Suma de los positivos.
 // 3-Cantidad de positivos.
 // 4-Cantidad de negativos.
 // 5-Cantidad de ceros.
@@ -38,18 +38,27 @@ function mostrar()
 				sumaPosi += num;
 				cantPosi += 1;
 					if(!(num /2 == 1)){
-						cantNroPares += 1;	
-					}
+						cantNroPares += 1;
+          }
+          /* O sino
+            if(!(num % 2 == 0)){
+              cantNroPares += 1;
+            }
+          */
 			}else if(num < 0){
 				sumaNega -= num;
 				cantNega += 1;
 			}else{
 				cantCeros += 1;
 				cantNroPares += 1;
-			}	
+			}
 	}
-		promedioPosi = sumaPosi / cantPosi;
-		promedioNega = sumaNega / cantNega;
+    promedioPosi = sumaPosi / cantPosi;
+      if(promedioNega == 0){
+        promedioNega = "0";
+      }else{
+        promedioNega = sumaNega / cantNega;
+      }
 		diferenciaPosiNega = sumaPosi - sumaNega;
 
 		document.write("Suma Total de Positivos: "+sumaPosi+"<br>");
@@ -65,7 +74,7 @@ function mostrar()
 
 
 	// var contador=0;
-	// //declarar contadores y variables 
+	// //declarar contadores y variables
 
 	// var respuesta="si";
 
@@ -73,8 +82,8 @@ function mostrar()
 	// {
 	// 	num = prompt("Ingrese los Valores");
 
-		
-	
+
+
 	// }
 
 
