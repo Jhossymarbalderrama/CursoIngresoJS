@@ -1,34 +1,26 @@
+var num;
+var suma = 0;
+var mult = 1;
+
 function mostrar()
 {
-  // var num;
-  // var acumulador=0;
-	var contador=0;
-	var positivo=0;
-	var negativo=1;
-  var respuesta='si';
-
-
-
-  // JB clase
-  // num = prompt("Ingresar los Valores");
-  // while(true){
-  //   contador +=1;
-  //   num = prompt("Ingresar los Valores");
-  //   num = parseInt(num);
-  //     while(isNaN(num)){
-  //       alert("Caracter Invalido");
-  //       num = prompt("Sacar Promedio.");
-  //       num = parseInt(num);
-  //     }
-  //     acumulador = acumulador + num;
-  //   if(num == NaN){
-  //     break
-  //   }
+  while(confirm("Quiere Ingresar?..")){
+    
+    do{
+      num = prompt("Ingrese el Numero");
+      num = parseInt(num);
+    }while(isNaN(num));
+    
+    
+    if(num > 0){
+      suma += num;
+    }else{
+      mult *= num;
+    }
 
   }
 
-
-document.getElementById('suma').value=positivo;
-document.getElementById('producto').value=negativo;
+document.getElementById('suma').value=suma;
+document.getElementById('producto').value=mult;
 
 }//FIN DE LA FUNCIÓN
