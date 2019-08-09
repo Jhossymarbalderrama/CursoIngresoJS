@@ -1,19 +1,18 @@
+//Enunciado:
+//Bienvenidos. 
+//Pedir por prompt el precio y el porcentaje de descuento, mostrar el precio final con descuento por id.
 var precio;
-var descuento;
-var descuentodelprecio;
-var total;
+var descuento=0;
+var precioFinal;
 
 function mostrar()
 {
-    precio = prompt("Precio del Producto","Coloque aquí el precio");
-    descuento = prompt("Porcentaje de Descuento","Coloque aquí el Descuento");
-
+    precio = prompt("Ingrese el Precio del Producto","aquí");
+    descuento = prompt("Ingrese el Descuento","aquí");
     precio = parseInt(precio);
     descuento = parseInt(descuento);
-    descuentodelprecio = parseInt(descuentodelprecio);
 
-    descuentodelprecio =  precio * descuento;
-    total =  descuentodelprecio  / 100;
-
-    document.getElementById("elPrecioFinal").value = total;
+    precioFinal = (descuento * precio) / 100;
+    
+    document.getElementById("elPrecioFinal").value = precioFinal;
 }

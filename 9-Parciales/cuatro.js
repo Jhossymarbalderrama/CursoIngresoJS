@@ -1,29 +1,41 @@
-var num1;
-var num2;
+// Enunciado:
+// Bienvenidos (IF). 
+// Pedir dos números y mostrar el resultado: 
+// Si son iguales los muestro concatenados. 
+// Si el primero es mayor, los resto, 
+// de lo contrario los sumo. 
+// Si la suma es mayor a 10 ,además de mostrar el resultado, muestro el mensaje 
+// "la suma es xxx y supero el 10".
+var valor1;
+var valor2;
 var resultado;
 
 function mostrar()
 {
-    num1 = prompt("Ingrese el primer Numero","Ingrese aquí");
-    num2 = prompt("Ingrese el segundo Numero","Ingrese aquí");
+    valor1 = prompt("Ingrese un valor numerico","aquí");
+    valor2 = prompt("Ingrese un segundo valor numerico","aquí");
 
-    if(num1==num2){
-        alert(num1+" y "+num2);
-    }else if(num1>num2){
-        num1 = parseInt(num1);
-        num2 = parseInt(num2);
-        resultado = num1 - num2 ;
 
-        alert("Su resultado restado es: "+ resultado);
-    }else if(num1<num2){
-        num1 = parseInt(num1);
-        num2 = parseInt(num2);
-        resultado = num1 + num2 ;
-
-        alert("Su resultado sumado es: "+ resultado);      
+    if(valor1 == valor2){
+        resultado = valor1+valor2;
+        alert("Resultado = "+resultado);
+    }else{
+        valor1 = parseInt(valor1);
+        valor2 = parseInt(valor2);
+    
+        if(valor1>valor2){
+            resultado = valor1 - valor2;
+            alert("Resultado = "+resultado);
+            
+        }else{
+            resultado = valor1 + valor2;
+    
+            if(resultado>10){
+                alert("La suma es "+resultado+" y supero el 10");
+            }else{
+                alert("Resultado = "+resultado);
+            }
+        }
     }
-
-    if(resultado>10){
-        alert("La suma es de "+resultado+" y supero el 10");
-    }
+    
 }
